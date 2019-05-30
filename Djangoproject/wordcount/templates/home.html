@@ -1,0 +1,56 @@
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href= "{% static 'css/style.css' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Jua" rel="stylesheet">
+    <title>Word Count</title>
+</head>
+<body>
+    <div id=wrap>
+        <div id="header">
+            <div class ="header_container">
+                <div class="header_login">
+                        <a href="#">Login</a>   
+                        <a href="#">SignUp</a>
+                </div>
+                <div class="header_tit">
+                    <h1><a href="{%url 'home'%}">WORD COUNT</a></h1>
+                </div>
+                <div class="header_menu">
+                    <ul>
+                        <li><a href="{%url 'home'%}">Home</a></li>
+                        <li><a href="{%url 'about'%}">About</a></li>
+                        <li><a href="">Menu</a></li>
+                        <li><a href="">Menu</a></li>
+                        <li><a href="">Menu</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id=contents>
+            <div id="cont_tit"> 
+                <div class="contents_container"></div>
+            </div>
+            <div id="cont_cont">
+                <div class="contents_container">
+                        <form action="{%url 'result'%}" style="text-align: center">
+                            <textarea onclick="this.value=''" name="fulltext" cols="94" rows="23">안녕, 글자를 세는 곳이야</textarea>
+                            <br>
+                            <input type="submit" value="count">
+                        </form>
+                </div>
+            </div>
+        </div>
+        <div id=footer>
+            <div class="footer_container">
+                <div class="source">
+                    <p style="font-family: 'Jua', sans-serif; font-weight: bold">강상혁</p>
+                </div> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
